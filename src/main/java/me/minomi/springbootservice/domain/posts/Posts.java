@@ -6,10 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import me.minomi.springbootservice.domain.BaseTimeEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * IDE : IntelliJ IDEA
@@ -20,7 +17,7 @@ import javax.persistence.Id;
 @Getter // 게터 생성
 @Entity // 언더스코어 네이밍으로 매칭
 public class Posts extends BaseTimeEntity {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length = 500, nullable = false)

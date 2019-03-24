@@ -2,6 +2,7 @@ package me.minomi.springbootservice.web;
 
 import lombok.AllArgsConstructor;
 import me.minomi.springbootservice.domain.posts.PostsRepository;
+import me.minomi.springbootservice.service.PostsService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class WebRestController {
 
-    private PostsRepository postsRepository;
+    private PostsService postsService;
 
     @GetMapping("/hello")
     public String hello() {
@@ -25,6 +26,6 @@ public class WebRestController {
 
     @PostMapping("/posts")
     public void savePosts(@RequestBody PostsSaveRequestsDto dto) {
-        postsRepository.save(dto.toEntity());
+        postsService.save(dto);
     }
 }

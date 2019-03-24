@@ -1,5 +1,6 @@
 package me.minomi.springbootservice.web;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,4 +26,12 @@ public class PostsSaveRequestsDto {
                 .author(author)
                 .build();
     }
+
+    @Builder
+    public PostsSaveRequestsDto(String title, String content, String author) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+    }
+
 }
