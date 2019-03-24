@@ -1,6 +1,5 @@
 package me.minomi.springbootservice.service;
 
-import lombok.AllArgsConstructor;
 import me.minomi.springbootservice.domain.posts.Posts;
 import me.minomi.springbootservice.domain.posts.PostsRepository;
 import me.minomi.springbootservice.web.PostsMainResponseDto;
