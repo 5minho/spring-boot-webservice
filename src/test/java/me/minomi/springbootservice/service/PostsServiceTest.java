@@ -54,12 +54,4 @@ public class PostsServiceTest {
         assertThat(posts.getContent()).isEqualTo(dto.getContent());
         assertThat(posts.getTitle()).isEqualTo(dto.getTitle());
     }
-
-    @Test
-    public void Dto데이터가_잘_출력된다() {
-        List<PostsMainResponseDto> posts = postsService.findAllDesc();
-        assertThat(posts.get(0).getTitle()).isEqualTo("테스트2");
-        assertThat(posts.get(1).getTitle()).isEqualTo("테스트1");
-    }
-
 }
