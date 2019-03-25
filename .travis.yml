@@ -13,11 +13,6 @@ cache:
 
 script: "./gradlew clean build"
 
-notifications:
-  email:
-    recipients:
-      - 5minhominho@gmail.com
-
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
@@ -30,3 +25,8 @@ deploy:
     on:
       repo: minomi/spring-boot-webservice
       branch: master
+
+notifications:
+  email:
+    recipients:
+      - 5minhominho@gmail.com
